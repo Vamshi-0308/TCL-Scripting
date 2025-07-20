@@ -1,0 +1,8 @@
+The input csv file contains the inputs required for performing synthesis using Yosys tool.
+The csv file has Design name, output dir path to create the outputs, netlist path, late library path, early library path and constraints file.
+The first subtask is to convert all the inputs into some format let's say format[1] which Yosys can understand and then also we need to conver the constraints csv file into SDC format let's say format[2] for Opentimer to understnad.
+First we need to create a shell script where we pass the csv file which contains the required inputs and then call the tcl script to perform the synthesis/format conversion/run opentimer and then dump the required output.
+Inside the shell script we should be checking for below scenarios.
+Forst is whether the csv file is specified or not, which we call as argument.
+Second is whether the provided csv file exists or not.
+Third is to check if the user is trying to query the usage of the script.
